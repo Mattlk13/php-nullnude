@@ -1,0 +1,26 @@
+{
+    "name": "dneural/php-nullnude",
+    "description": "NullNude client for PHP",
+    "keywords": ["nullnude", "sdk", "client"],
+    "type": "library",
+    "homepage": "https://github.com/dneural/php-nullnude",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "dNeural"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "ext-curl": "*"
+    },
+    "require-dev": {
+        "phpdocumentor/phpdocumentor": "2.*",
+        "phpunit/phpunit": "3.7.14"
+    },
+    "autoload": {
+        "psr-4": {
+            "NullNude\\": "src/NullNude/"
+        }
+    }
+}
