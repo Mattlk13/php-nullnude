@@ -217,7 +217,7 @@ class NullNude
         if ( filter_var($image, FILTER_VALIDATE_URL, 
                         FILTER_FLAG_SCHEME_REQUIRED) ) {
             $method = 'GET';
-        } else if (file_exists($image) ) {
+        } else if ( realpath($image) ) {
             $method = 'POST';
         } else {
             throw new NullNudeException('The image path supplied is neither a ' .

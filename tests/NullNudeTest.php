@@ -58,7 +58,7 @@ class NullNudeTest extends \PHPUnit_Framework_TestCase
         $this->api_key    = 'app_key';
         $this->api_secret = 'app_secret';
         $this->image = 'http://example.com/image.jpg';
-        $this->imagePath = __DIR__ . './test_file.txt';
+        $this->imagePath = __DIR__ . '/test_file.txt';
     }
     
     /**
@@ -265,13 +265,6 @@ class NullNudeTest extends \PHPUnit_Framework_TestCase
             'api_key'    => $this->api_key, 
             'api_secret' => $this->api_secret
         ], $http);
-        
-        var_dump('Path:');
-        var_dump($this->imagePath);
-        var_dump('Realpath:');
-        var_dump(realpath($this->imagePath));
-        var_dump('File exists:');
-        var_dump(file_exists($this->imagePath));
         
         $moderateResource = $nullNude->moderate($this->imagePath);
         
