@@ -266,6 +266,13 @@ class NullNudeTest extends \PHPUnit_Framework_TestCase
             'api_secret' => $this->api_secret
         ], $http);
         
+        var_dump('Path:');
+        var_dump($this->imagePath);
+        var_dump('Realpath:');
+        var_dump(realpath($this->imagePath));
+        var_dump('File exists:');
+        var_dump(file_exists($this->imagePath));
+        
         $moderateResource = $nullNude->moderate($this->imagePath);
         
         $this->assertTrue($moderateResource->isModerated());
